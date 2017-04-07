@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Werewolf - SR Style</title>
+  </head>
+  <body ng-controller='mainCtrl'>
+    <button ng-click="backgroundChange()" type="button" name="button">Change the Background</button>
+    <div id="main-parent">
+      <div id="cover">
+        <div id="profiles">
+          <div class="frame" id="profile-one">
+            <h1 class="initials">R.</br>W.</h1>
+            <img src={{profileFrame}} height=250px alt="">
+            <h2>Richard Wurth</h3>
+              <div class="profile-buttons">
+                <button id="create" type="button" name="button">Add Player</button>
+                <button id="delete" type="button" name="button">Remove</button>
+              </div>
+            </div>
+          <div class="frame" id="profile-two"><img src={{profileFrame}} height=250px alt=""></div>
+          <div class="frame" id="profile-three"><img src={{profileFrame}} height=250px alt=""></div>
+          <div class="frame" id="profile-four"><img src={{profileFrame}} height=250px alt=""></div>
+          <div class="frame" id="profile-five"><img src={{profileFrame}} height=250px alt=""></div>
+        </div>
+      </div>
+    </div>
+
+<!-- Below are the scripts for Jquery, Angular and Javascript Files -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="app.js"></script>
+<script src="mainCtrl.js"></script>
+<script src="service.js"></script>
+
+<!-- Above are the scripts for Jquery, Angular and Javascript Files -->
+  </body>
+</html>
