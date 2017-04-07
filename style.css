@@ -64,4 +64,25 @@ button {
   border-radius: 6px;
   background-color: rgba(140, 140, 140, 0.9); }
 
+#kill {
+  display: none;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100px; }
+
+#rip-one {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+#rip-one-name {
+  position: absolute; }
+
+#rip-one-saying {
+  position: absolute;
+  padding-top: 75px;
+  font-family: serif; }
+
 /*# sourceMappingURL=style.css.map */
