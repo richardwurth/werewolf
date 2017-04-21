@@ -21,10 +21,12 @@ $scope.addProfile = function() {
     lastOne: splitNameOne[1].charAt(0).toUpperCase()+".",
     firstOne: splitNameOne[0].charAt(0).toUpperCase()+".",
     custom: true,
-    toggleCustom: function() {
-      console.log(this.custom);
-      this.custom = !this.custom;
-    }
+    kill: false
+    // toggleCustom: function() {
+    //   console.log(this.custom);
+    //   this.custom = !this.custom;
+    // },
+
 
     // $scope.profileTracker[index].lastOne = splitNameOne[1].charAt(0).toUpperCase()+".";
     // $scope.profileTracker[index].firstOne = splitNameOne[0].charAt(0).toUpperCase()+".";
