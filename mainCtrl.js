@@ -3,9 +3,36 @@ angular.module('app').controller('mainCtrl', function($scope){
   // let firstInitialPrompt = prompt("What is the initial of your first name?");
 
 // $scope.firstInitial = firstInitialPrompt;
-$scope.firstOne = "";
-$scope.lastOne = "";
-$scope.fullNameOne = "";
+// $scope.firstOne = "";
+// $scope.lastOne = "";
+// $scope.fullNameOne = "";
+
+
+// $scope.profiles = ["profile.html"];
+const profiles = [{}];
+$scope.profileTracker = [];
+$scope.addProfile = function() {
+  let fullNameOne = prompt('What is the Full Name of the player to add?');
+  let splitNameOne = fullNameOne.split(" ");
+  let newPerson = {
+    fullNameOne: fullNameOne,
+    firstName: fullNameOne,
+    // $scope.profileTracker[index].firstName = fullNameOne;
+    lastOne: splitNameOne[1].charAt(0).toUpperCase()+".",
+    firstOne: splitNameOne[0].charAt(0).toUpperCase()+".",
+    custom: true,
+    toggleCustom: function() {
+      console.log(this.custom);
+      this.custom = !this.custom;
+    }
+
+    // $scope.profileTracker[index].lastOne = splitNameOne[1].charAt(0).toUpperCase()+".";
+    // $scope.profileTracker[index].firstOne = splitNameOne[0].charAt(0).toUpperCase()+".";
+
+  };
+  $scope.profileTracker.push(newPerson);
+  console.log($scope.profileTracker);
+};
 
 let masterPassword = "";
 
@@ -14,20 +41,17 @@ $scope.passwordSet = function(){
   $('#password-set').hide();
 };
 
-$scope.addOne = function(){
-  let passwordCheck = prompt("Please enter the Master Password");
-  if (passwordCheck === masterPassword) {
-  let fullNameOne = prompt('What is the Full Name of the player to add?');
-  $scope.fullNameOne = fullNameOne;
-  let splitNameOne = fullNameOne.split(" ");
-  $scope.firstOne = splitNameOne[0].charAt(0).toUpperCase()+".";
-  $scope.lastOne = splitNameOne[1].charAt(0).toUpperCase()+".";
-  $('#create').hide();
-  $('#delete').hide();
-  $('#kill').show();
-} else {
-  alert("Incorrect password was entered.");
-}
+$scope.addOne = function(index){
+    let fullNameOne = prompt('What is the Full Name of the player to add?');
+    $('#create').hide();
+    $('#delete').hide();
+    $('#kill').show();
+  // }
+//   let passwordCheck = prompt("Please enter the Master Password");
+//   if (passwordCheck === masterPassword) {
+// } else {
+//   alert("Incorrect password was entered.");
+// }
 };
 
 $scope.deleteOne = function(){
@@ -39,16 +63,16 @@ $scope.deleteOne = function(){
 }
 };
 
-$scope.killOne = function(){
-  let passwordCheck = prompt("Please enter the Master Password");
-  if (passwordCheck === masterPassword) {
-  $('#profile-one-content').hide();
-  $('#rip-one').css("display","flex");
-  $('#rip-one-name').show();
-} else {
-  alert("Incorrect password was entered.");
-}
-};
+// $scope.killOne = function(){
+//   let passwordCheck = prompt("Please enter the Master Password");
+//   if (passwordCheck === masterPassword) {
+//   $('#profile-one-content').hide();
+//   $('#rip-one').css("display","flex");
+//   $('#rip-one-name').show();
+// } else {
+//   alert("Incorrect password was entered.");
+// }
+// };
 $scope.reviveOne = function(){
   let passwordCheck = prompt("Please enter the Master Password");
   if (passwordCheck === masterPassword) {
@@ -65,7 +89,7 @@ $scope.reviveOne = function(){
 };
 
 
-$scope.profileFrame = "http://orig11.deviantart.net/e3ca/f/2015/137/c/b/gothic_mirror_frame_png_by_otbwriter-d8tjtd6.png";
+$scope.profileFrame = "http://img06.deviantart.net/b2bc/i/2015/202/b/7/638_surf_frame_by_tigers_stock-d926rr4.png";
   // Below is the daytime and night time changing function
   let daytime = false;
   // var nextTime = "Day";

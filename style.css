@@ -30,7 +30,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin: 20px; }
 
 .frame {
   margin: 40px;
@@ -48,7 +49,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 25px;
-  margin-top: 20%; }
+  margin-top: 20%;
+  font-size: 55px; }
 
 #create {
   font-family: 'Architects Daughter', cursive;
@@ -65,17 +67,17 @@ button {
   background-color: rgba(140, 140, 140, 0.9); }
 
 #kill {
-  display: none;
   font-family: 'Architects Daughter', cursive;
   font-weight: bold;
   font-size: 18px;
   width: 100px; }
 
 #rip-one {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: relative; }
 
 #rip-one-name {
   position: absolute; }
@@ -84,5 +86,11 @@ button {
   position: absolute;
   padding-top: 75px;
   font-family: serif; }
+
+#profile-one {
+  height: 300px; }
+
+#profileRepeater {
+  height: 400px; }
 
 /*# sourceMappingURL=style.css.map */

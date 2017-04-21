@@ -12,42 +12,29 @@
   <button ng-click="backgroundChange()" type="button" name="button">Change to {{timeOfDay}}</button>
   <div id="main-parent">
     <div id="cover">
+      <button ng-click="addProfile(0)" name="button">Add Player</button>
       <div id="profiles">
-        <div id="profile-one">
-          <div id="rip-one">
-            <a ng-click="reviveOne()"><img src="https://img.clipartfest.com/2625bad6b05dee990e461761bbbf0292_png-small-medium-large-gravestone-clipart-png_504-594.png" height=250px alt="" id="profile-one-rip"></a>
-            <h2 id="rip-one-name">{{fullNameOne}}</h2>
-            <p id="rip-one-saying">One less mouth to feed</p>
-          </div>
-          <div class="frame" id="profile-one-content">
-            <h1 class="initials">{{firstOne}}</br>{{lastOne}}</h1>
-            <img src={{profileFrame}} height=250px alt="">
-            <h2>{{fullNameOne}}</h3>
-              <div class="profile-buttons">
-                <button ng-click="addOne()" id="create" type="button" name="button">Add Player</button>
-                <button ng-click="deleteOne()" id="delete" type="button" name="button">Remove</button>
-                <button ng-click="killOne()" id="kill" type="button" name="button">Kill</button>
-              </div>
-            </div>
-          </div>
-          <div class="frame" id="profile-two"><img src={{profileFrame}} height=250px alt=""></div>
-          <div class="frame" id="profile-three"><img src={{profileFrame}} height=250px alt=""></div>
-          <div class="frame" id="profile-four"><img src={{profileFrame}} height=250px alt=""></div>
-          <div class="frame" id="profile-five"><img src={{profileFrame}} height=250px alt=""></div>
+        <div id="profileRepeater" ng-repeat="profile in profileTracker track by $index">
+          <ng-include src=" 'profile.html' "></ng-include>
         </div>
+        <!-- <div class="frame" id="profile-two"><img src={{profileFrame}} height=250px alt=""></div>
+        <div class="frame" id="profile-three"><img src={{profileFrame}} height=250px alt=""></div>
+        <div class="frame" id="profile-four"><img src={{profileFrame}} height=250px alt=""></div>
+        <div class="frame" id="profile-five"><img src={{profileFrame}} height=250px alt=""></div> -->
       </div>
     </div>
+  </div>
 
-    <!-- Below are the scripts for Jquery, Angular and Javascript Files -->
+  <!-- Below are the scripts for Jquery, Angular and Javascript Files -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="app.js"></script>
-    <script src="mainCtrl.js"></script>
-    <script src="service.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="app.js"></script>
+  <script src="mainCtrl.js"></script>
+  <script src="service.js"></script>
 
-    <!-- Above are the scripts for Jquery, Angular and Javascript Files -->
-  </body>
-  </html>
+  <!-- Above are the scripts for Jquery, Angular and Javascript Files -->
+</body>
+</html>

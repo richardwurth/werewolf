@@ -1,0 +1,69 @@
+nav {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.5;
+  margin: 50px auto;
+  width: 400px;
+  margin: 100px auto;
+  padding: 0px;
+  box-shadow: 0px 0px, 1px 1px, 2px 2px, 3px 3px, 4px 4px, 5px 5px, 6px 6px, 7px 7px, 8px 8px, 9px 9px, 10px 10px, 11px 11px, 12px 12px;
+  }
+
+.menu-item {
+  background: white;
+  width: 400px;
+  margin: 0px;
+  padding: 0;
+  text-decoration: none; }
+
+.menu-item h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 12px;
+  background: #2398ff;
+  margin: 0px; }
+
+.menu-item h4 a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  width: 400px;
+  margin: 0px; }
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0px; }
+
+.menu-item ul {
+  list-style-type: none;
+  line-height: 40px;
+  margin: 0px;
+  color: #fff;
+  font-size: 20px;
+  max-height: 0;
+  padding: 0px;
+  background: white;
+  overflow: hidden;
+  margin: 0px;
+  text-decoration: none;
+  transition: all .5s;
+  }
+
+.menu-item:hover ul {
+  margin: 0px;
+  color: black;
+  background-color: white;
+  padding: 7px 12px;
+  max-height: 1000px;
+  width: 375px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.menu-item li a {
+  box-shadow: 0px 0px, 1px 1px, 2px 2px, 3px 3px, 4px 4px, 5px 5px, 6px 6px, 7px 7px, 8px 8px, 9px 9px, 10px 10px, 11px 11px, 12px 12px;
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+}

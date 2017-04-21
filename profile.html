@@ -1,0 +1,17 @@
+<div id="profile-one" ng-init="profileIndex = $index;">
+  <div ng-hide="profile.custom" id="rip-one">
+    <a ng-click="profile.toggleCustom()"><img src="https://img.clipartfest.com/2625bad6b05dee990e461761bbbf0292_png-small-medium-large-gravestone-clipart-png_504-594.png" style="z-index: 5" height=250px alt="" id="profile-one-rip"></a>
+    <h2 id="rip-one-name">{{profile.fullNameOne}}</h2>
+    <p id="rip-one-saying">One less mouth to feed</p>
+  </div>
+  <div ng-hide="!profile.custom" class="frame" id="profile-one-content">
+    <h1 class="initials">{{profile.firstOne}}</br>{{profile.lastOne}}</h1>
+    <img src={{profileFrame}} height=250px alt="">
+    <h2>{{profile.firstName}} {{profile.lastName}}</h3>
+      <div class="profile-buttons">
+        <!-- <button ng-click="addOne(profileIndex)" id="create" type="button" name="button">Add Player</button> -->
+        <button ng-click="deleteOne(profileIndex)" id="delete" type="button" name="button">Remove</button>
+        <button ng-click="profile.toggleCustom()" id="kill" type="button" name="button">Kill</button>
+      </div>
+    </div>
+  </div>
