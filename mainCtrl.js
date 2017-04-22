@@ -13,6 +13,7 @@ const profiles = [{}];
 $scope.profileTracker = [];
 $scope.addProfile = function() {
   let fullNameOne = prompt('What is the Full Name of the player to add?');
+  let role = prompt('What is the role of this player?')
   let splitNameOne = fullNameOne.split(" ");
   let newPerson = {
     fullNameOne: fullNameOne,
@@ -21,7 +22,15 @@ $scope.addProfile = function() {
     lastOne: splitNameOne[1].charAt(0).toUpperCase()+".",
     firstOne: splitNameOne[0].charAt(0).toUpperCase()+".",
     custom: true,
-    kill: false
+    showDead: false,
+    role: role
+    // killSwitch: function() {
+    //   this.kill = !this.kill;
+    //   console.log(kill);
+    // }
+
+// $scope.toggle = function () {
+//   $scope.data.active = !$scope.data.active;
     // toggleCustom: function() {
     //   console.log(this.custom);
     //   this.custom = !this.custom;
